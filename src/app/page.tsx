@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import ActorCard from "./components/ActorCard/ActorCard";
+import QuoteSection from "./components/QuoteSection/QuoteSection";
 
 export default function Home() {
   return (
@@ -16,18 +17,68 @@ export default function Home() {
       <main className="bg-[#946426]">
         <div className="h-8 bg-[#340100]"></div>
         <h1 className="text-6xl font-serif sticky z-10 mb-6">The Movie</h1>
-        <div>
-          Images
-          <img
-            src="https://images.mubicdn.net/images/film/34125/cache-24248-1445880490/image-w1280.jpg?size=800x"
-            alt="Movie pic"
-          />
-        </div>
-        <div>Quote</div>
         <div>Image</div>
-        <div>SYNOPSIS</div>
-        <div>Actors</div>
-        <div>Movie Info</div>
+        <div className="grid grid-cols-2 gap-x-40">
+          <div>
+            <img
+              src="https://images.mubicdn.net/images/film/34125/cache-24248-1445880490/image-w1280.jpg?size=800x"
+              alt="Movie pic"
+            />
+          </div>
+          <div>
+            <h2 className="font-semibold">SYNOPSIS</h2>
+            <hr />
+            <p>
+              The plot follows Mia Thermopolis (Hathaway), a shy American
+              teenager who discovers she is heir to throne of a European
+              kingdom. Under the tutelage of her estranged grandmother
+              (Andrews), the kingdom&apos;s reigning queen, Mia must choose
+              whether to claim or renounce the title she has inherited.
+            </p>
+          </div>
+          <div>
+            <QuoteSection
+              author="NY TIMES"
+              quote="One of the most delightful and touching comedies to grace the big-screen in years."
+            />
+          </div>
+          <div className="my-5">
+            <h2 className="font-semibold">ACTORS</h2>
+            <hr />
+            <div className="flex">
+              <ActorCard
+                name="Anne Hathaway"
+                image="https://cdn.britannica.com/49/258149-050-767F0B62/Anne-Hathaway-SXSW-Conference.jpg"
+              />
+              <ActorCard
+                name="DAME JULIE ANDREWS"
+                image="https://media.glamour.com/photos/5d94db112545d70008fe9ab4/4:3/w_2232,h_1674,c_limit/Andrews.Julie.approved-2.jpg"
+              />
+              <ActorCard
+                name="Mandy Moore"
+                image="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mandy_Moore_at_SXSW_2018_%2825904503147%29_%28cropped%29.jpg/220px-Mandy_Moore_at_SXSW_2018_%2825904503147%29_%28cropped%29.jpg"
+              />
+              <ActorCard
+                name="Hector Elizondo"
+                image="https://m.media-amazon.com/images/M/MV5BMTAxMDEzMTE4MDFeQTJeQWpwZ15BbWU3MDk3ODU3MTM@._V1_FMjpg_UX1000_.jpg"
+              />
+            </div>
+          </div>
+          <div className="col-start-2">
+            <h2 className="font-semibold">MOVIE INFO</h2>
+            <hr />
+            <div className="grid grid-cols-2">
+              <p className="text-xs whitespace-nowrap">Genre: Comedy</p>
+              <p className="text-xs whitespace-nowrap">
+                Director: Garry Marshall
+              </p>
+              <p className="text-xs">Duration: 114 minutes</p>
+              <p className="text-xs">Studio: Walt Disney</p>
+              <p className="text-xs">In Theaters: July 2001</p>
+              <p className="text-xs">Box Office: $107,000,000</p>
+            </div>
+          </div>
+        </div>
         <div>More images</div>
       </main>
     </div>
