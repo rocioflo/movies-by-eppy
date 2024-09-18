@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import ActorCard from "./components/ActorCard/ActorCard";
 import QuoteSection from "./components/QuoteSection/QuoteSection";
-import "./animations.css";
 
 export default function Home() {
   return (
