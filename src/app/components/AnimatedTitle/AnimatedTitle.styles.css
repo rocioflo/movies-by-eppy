@@ -1,0 +1,74 @@
+div #animatedTitle {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  width: 100%;
+
+  animation: adjust-animatedTitle linear both;
+  animation-timeline: scroll();
+  animation-range: 0 2rem;
+  scroll-snap-type: y mandatory;
+}
+
+@keyframes adjust-animatedTitle {
+  to {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#titleYear {
+  justify-self: end;
+  font-size: 2rem;
+  animation: adjust-titleYear linear both;
+  animation-timeline: scroll();
+}
+
+@keyframes adjust-titleYear {
+  to {
+    opacity: 0%;
+  }
+}
+
+#titleImage {
+  height: 13rem;
+  justify-self: end;
+  grid-row: span 2 / span 2;
+  animation: adjust-titleImage linear both;
+  animation-timeline: scroll();
+  scroll-behavior: smooth;
+  transition: ease-in;
+}
+
+@keyframes adjust-titleImage {
+  from {
+  }
+  to {
+    transform: translate(-90%, -20%);
+    /* justify-self: baseline; */
+    top: 0;
+  }
+}
+
+#titleName {
+  font-size: 5.5rem;
+  line-height: 1;
+  font-weight: 800;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  z-index: 10;
+  margin-bottom: 1.5rem /* 24px */;
+  grid-column-start: 1;
+  justify-self: end;
+
+  animation: adjust-titleName linear both;
+  animation-timeline: scroll();
+}
+
+@keyframes adjust-titleName {
+  to {
+    /* justify-self: baseline; */
+    padding-left: 2rem;
+    font-size: 4rem;
+    transform: translate(-5%);
+  }
+}
