@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import ActorCard from "./components/ActorCard/ActorCard";
 import QuoteSection from "./components/QuoteSection/QuoteSection";
+import "./animations.css";
 
 export default function Home() {
   return (
@@ -14,10 +16,19 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main className="bg-[#946426]">
-        <div className="h-8 bg-[#340100]"></div>
-        <h1 className="text-6xl font-serif sticky z-10 mb-6">The Movie</h1>
-        <div>Image</div>
+      <main className="bg-[#946426] h-full">
+        <div className="absolute grid grid-cols-[2.5fr,_1fr] grid-rows-[1fr,_4fr] w-full">
+          <p className="justify-self-end text-2xl">2001</p>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:780/1*AdDznm7hA6w5s92Hxdz3KQ.jpeg"
+            alt="Movie pic"
+            className="h-40 justify-self-end row-span-2"
+          />
+          <h1 className="text-6xl font-extrabold font-serif z-10 mb-6 col-start-1 justify-self-end">
+            The Princess Diaries
+          </h1>
+        </div>
+        <div className="h-16 bg-[#340100]"></div>
         <div className="grid grid-cols-2 gap-x-40">
           <div>
             <img
@@ -25,7 +36,7 @@ export default function Home() {
               alt="Movie pic"
             />
           </div>
-          <div>
+          <div className="mt-24">
             <h2 className="font-semibold">SYNOPSIS</h2>
             <hr />
             <p>
@@ -36,7 +47,7 @@ export default function Home() {
               whether to claim or renounce the title she has inherited.
             </p>
           </div>
-          <div>
+          <div className="flex justify-center items-center">
             <QuoteSection
               author="NY TIMES"
               quote="One of the most delightful and touching comedies to grace the big-screen in years."
@@ -45,7 +56,7 @@ export default function Home() {
           <div className="my-5">
             <h2 className="font-semibold">ACTORS</h2>
             <hr />
-            <div className="flex">
+            <div className="flex flex-wrap">
               <ActorCard
                 name="Anne Hathaway"
                 image="https://cdn.britannica.com/49/258149-050-767F0B62/Anne-Hathaway-SXSW-Conference.jpg"
