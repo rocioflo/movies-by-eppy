@@ -3,6 +3,10 @@ import ActorCard from "./components/ActorCard/ActorCard";
 import { AnimatedTitle } from "./components/AnimatedTitle/AnimatedTitle";
 import QuoteSection from "./components/QuoteSection/QuoteSection";
 import { SectionTitle } from "./components/SectionTitle/SectionTitle";
+import dameJulieAndrews from "../public/dameJulieAndrews.jpg";
+import anneHathaway from "../public/anneHathaway.webp";
+import mandyMoore from "../public/mandyMoore.jpg";
+import hectorElizondo from "../public/hectorElizondo.webp";
 
 export default function Home() {
   return (
@@ -27,31 +31,19 @@ export default function Home() {
             stepping up to the throne.
           </p>
         </div>
-        <div className="flex justify-center items-center">
-          <QuoteSection
-            author="NY TIMES"
-            quote="One of the most delightful and touching comedies to grace the big-screen in years."
-          />
-        </div>
+
+        <QuoteSection
+          quote="One of the most delightful and touching comedies to grace the big-screen in years."
+          author="NY TIMES"
+        />
+
         <div className="my-5">
           <SectionTitle titleName="ACTORS" />
           <div className="flex flex-wrap">
-            <ActorCard
-              name="Anne Hathaway"
-              image="https://cdn.britannica.com/49/258149-050-767F0B62/Anne-Hathaway-SXSW-Conference.jpg"
-            />
-            <ActorCard
-              name="DAME JULIE ANDREWS"
-              image="https://media.glamour.com/photos/5d94db112545d70008fe9ab4/4:3/w_2232,h_1674,c_limit/Andrews.Julie.approved-2.jpg"
-            />
-            <ActorCard
-              name="Mandy Moore"
-              image="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mandy_Moore_at_SXSW_2018_%2825904503147%29_%28cropped%29.jpg/220px-Mandy_Moore_at_SXSW_2018_%2825904503147%29_%28cropped%29.jpg"
-            />
-            <ActorCard
-              name="Hector Elizondo"
-              image="https://m.media-amazon.com/images/M/MV5BMTAxMDEzMTE4MDFeQTJeQWpwZ15BbWU3MDk3ODU3MTM@._V1_FMjpg_UX1000_.jpg"
-            />
+            <ActorCard name="Anne Hathaway" image={anneHathaway} />
+            <ActorCard name="DAME JULIE ANDREWS" image={dameJulieAndrews} />
+            <ActorCard name="Mandy Moore" image={mandyMoore} />
+            <ActorCard name="Hector Elizondo" image={hectorElizondo} />
           </div>
         </div>
         <div className="col-start-2">

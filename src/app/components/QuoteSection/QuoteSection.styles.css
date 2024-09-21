@@ -1,0 +1,10 @@
+div #quoteSectionContainer {
+  height: 100%;
+  width: 100%;
+  background: 25% 15% no-repeat url("../../../public/right.png");
+  background-size: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
